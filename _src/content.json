@@ -1,13 +1,13 @@
 {
   "site": {
-    "author": "NEW ARTIST NAME",
-    "siteUrl": "https://example.com",
+    "author": "Elormentary Studios",
+    "siteUrl": "https://elormentary.github.io",
     "analyticsId": "",
     "keywords": "session bassist, bass player, remote bass sessions, music production, mixing, mastering, audio engineering",
     "ogTitle": "Elormentary Studios - Session Bass, Production, Mixing & Mastering",
     "ogDescription": "Session bass playing plus production, mixing and mastering work. Listen to samples and get in touch!",
-    "ogImage": "https://example.com/img/intro/headshot.svg",
-    "twitterTitle": "NEW ARTIST NAME - Session Bass & Production",
+    "ogImage": "",
+    "twitterTitle": "Elormentary Studios - Session Bass & Production",
     "twitterDescription": "Session bass playing plus production, mixing and mastering work. Hear samples and get in touch."
   },
   "contact": {
