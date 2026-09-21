@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- GENERATED FILE — do not edit by hand. Edit _src/content.json or _src/templates/booking.html and rebuild with the site editor. -->
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{site.analyticsId}}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{site.analyticsId}}');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{booking.seoTitle}}</title>
+  <meta name="keywords" content="{{site.keywords}}" />
+  <meta name="author" content="{{site.author}}" />
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/touch.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+  <meta name="description" content="{{booking.seoDescription}}">
+
+  <meta property="og:title" content="{{site.ogTitle}}" />
+  <meta property="og:description" content="{{site.ogDescription}}" />
+  <meta property="og:image" content="{{site.ogImage}}" />
+  <meta property="og:url" content="{{site.siteUrl}}" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{site.twitterTitle}}" />
+  <meta name="twitter:description" content="{{site.twitterDescription}}" />
+  <meta name="twitter:image" content="{{site.ogImage}}" />
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="img/intro/logo.svg" alt="{{site.author}} logo"></div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="navbar">
+      <a href="/">About</a>
+      <a href="/#bass">Bass Playing</a>
+      <a href="/#production">Production</a>
+      <a href="/#reviews">Reviews</a>
+      <a href="booking">Booking</a>
+      <a href="/#contact">Contact</a>
+      <a href="faq">FAQ and Policies</a>
+    </nav>
+  </header>
+
+  <section id="booking">
+    <br><br><br>
+    <div class="section-title">
+      <h2>{{booking.heading}}</h2>
+      <p>{{booking.blurb}}</p>
+    </div>
+
+    <form class="booking-form" action="{{contact.formAction}}" method="POST">
+      <input type="hidden" name="_subject" value="New booking inquiry — {{site.author}}">
+
+      <div class="bf-two-col">
+        <div>
+          <label class="bf-label" for="bf-first">First Name *</label>
+          <input type="text" id="bf-first" name="First Name" placeholder="Enter your first name" required>
+        </div>
+        <div>
+          <label class="bf-label" for="bf-last">Last Name *</label>
+          <input type="text" id="bf-last" name="Last Name" placeholder="Enter your last name" required>
+        </div>
+      </div>
+
+      <label class="bf-label" for="bf-band">Band/Artist Name *</label>
+      <input type="text" id="bf-band" name="Band/Artist Name" placeholder="e.g., Flying Space Monkeys" required>
+
+      <label class="bf-label" for="bf-email">Email *</label>
+      <input type="email" id="bf-email" name="_replyto" placeholder="e.g., name@example.com" required>
+
+      <fieldset class="bf-group">
+        <legend class="bf-label">What services are you interested in?</legend>
+        <label class="bf-choice"><input type="checkbox" name="Services" value="Mixing"> Mixing</label>
+        <label class="bf-choice"><input type="checkbox" name="Services" value="Mastering"> Mastering</label>
+        <label class="bf-choice"><input type="checkbox" name="Services" value="Bass Playing for Live Performance(s)"> Bass Playing for Live Performance(s)</label>
+        <label class="bf-choice"><input type="checkbox" name="Services" value="Bass Playing for Recorded Track(s)"> Bass Playing for Recorded Track(s)</label>
+        <label class="bf-choice"><input type="checkbox" name="Services" value="Songwriting and/or Song Production"> Songwriting and/or Song Production</label>
+        <label class="bf-choice"><input type="checkbox" name="Services" value="Vocal or Instrument Recording"> Vocal or Instrument Recording</label>
+        <label class="bf-choice"><input type="checkbox" name="Services" value="Other"> Other</label>
+      </fieldset>
+
+      <label class="bf-label" for="bf-link">Link to any existing work (if applicable)</label>
+      <input type="text" id="bf-link" name="Link to existing work" placeholder="Link to music, social media, portfolio, etc.">
+
+      <fieldset class="bf-group">
+        <legend class="bf-label">What kind of budget allocated to your project?</legend>
+        <label class="bf-choice"><input type="radio" name="Budget" value="$50-$99"> $50-$99</label>
+        <label class="bf-choice"><input type="radio" name="Budget" value="$100-$499"> $100-$499</label>
+        <label class="bf-choice"><input type="radio" name="Budget" value="$500-$999"> $500-$999</label>
+        <label class="bf-choice"><input type="radio" name="Budget" value="$1000+"> $1000+</label>
+        <label class="bf-choice"><input type="radio" name="Budget" value="Not sure yet"> Not sure yet</label>
+      </fieldset>
+
+      <fieldset class="bf-group">
+        <legend class="bf-label">Where did you hear about me?</legend>
+        <label class="bf-choice"><input type="radio" name="Heard about me via" value="Peer referral"> Peer referral</label>
+        <label class="bf-choice"><input type="radio" name="Heard about me via" value="Google"> Google</label>
+        <label class="bf-choice"><input type="radio" name="Heard about me via" value="Instagram"> Instagram</label>
+        <label class="bf-choice"><input type="radio" name="Heard about me via" value="Facebook"> Facebook</label>
+        <label class="bf-choice"><input type="radio" name="Heard about me via" value="Other"> Other</label>
+      </fieldset>
+
+      <label class="bf-label" for="bf-details">Provide any additional details for your project below. Please be as detailed as you can! *</label>
+      <textarea id="bf-details" name="Project details" placeholder="How many songs? Musical influences? Overall goal and intentions for your project?" required></textarea>
+
+      <div class="text-center" style="margin-top: 2rem;">
+        <button class="site-btn" type="submit">Submit Form</button>
+      </div>
+    </form>
+
+    <div class="ft-contact-widget">
+      <p><a href="mailto:{{contact.email}}"><i class="fa fa-envelope"></i> {{contact.email}}</a></p>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

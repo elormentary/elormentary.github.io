@@ -1,0 +1,700 @@
+/* ============================================================
+   Brand colours — edited by the site editor's Colours tab.
+   Every colour on the site references one of these variables.
+   ============================================================ */
+:root {
+  --accent: #813d9c;            /* brand colour: links, buttons, highlights */
+  --accent-soft: #dc8add;     /* brand colour w/ transparency: glows, visited links */
+  --accent-active: #dc8add;     /* active filter button fill */
+  --accent-contrast: #ffffff;   /* text on brand-coloured buttons */
+  --page-bg: #121212;           /* page background */
+  --backdrop: #000000;          /* hero & mobile playlist background */
+  --card-bg: #1e1e1e;           /* track & review card background */
+  --button-bg: #2a2a2a;         /* button background */
+  --button-border: #444444;     /* button border & hover */
+  --tooltip-bg: #333333;        /* tooltip background */
+  --playing-bg: #171a1a;        /* now-playing row background (mobile) */
+  --overlay: rgba(0, 0, 0, 0.7);        /* header & hero text overlay */
+  --overlay-strong: rgba(0, 0, 0, 0.9); /* mobile menu overlay */
+  --text: #ffffff;              /* main text */
+  --text-muted: #cccccc;        /* secondary text (track credits) */
+  --text-subtle: #aaaaaa;       /* tertiary text (track genres) */
+  --form-line: #c0c0c0;         /* contact form underline */
+  --form-placeholder: #acacac;  /* contact form placeholder text */
+  --row-line: #e0e0e0;          /* mobile playlist dividers */
+  --danger: #ff6666;            /* disclaimer text */
+  --danger-strong: #b22222;     /* disclaimer text (mobile) */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  background: var(--page-bg);
+  color: var(--text);
+  margin: 0;
+}
+
+main, #app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Section blurbs — script.js swaps .section-blurb variants per credit filter */
+.section-blurb {
+  text-align: center;
+}
+
+/* Adjust h4 filter labels inside the player sections */
+.player-section h4 {
+  margin-bottom: 0.4rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Broad categories in horizontal scroll row */
+.filter-row {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 8px;
+  padding-bottom: 6px;
+  scrollbar-width: none;       /* Firefox */
+  justify-content: center;
+}
+.filter-row::-webkit-scrollbar {
+  display: none;               /* Chrome */
+}
+
+.filter-row button {
+  flex: 0 0 auto;
+}
+
+/* Subcategory rows behave normally */
+.sub-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 0.4rem;
+}
+
+/* Buttons */
+.filter-row button,
+.sub-filter-row button {
+  background: var(--button-bg);
+  color: var(--text);
+  border: 1px solid var(--button-border);
+  padding: 6px 12px;
+  border-radius: 14px;
+  font-size: 0.68rem;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.filter-row button.active,
+.sub-filter-row button.active {
+  background: var(--accent-active);
+  border-color: var(--accent);
+}
+
+.track {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  position: relative;
+  max-width: 800px;
+  width: 250px;
+  scroll-snap-align: start;
+  align-items: flex-start;
+  flex: 0 0 auto;
+}
+
+.track-grid {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+}
+
+.track:hover {
+  transform: scale(1.02);
+}
+
+.track img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.track-details {
+  padding: 1rem;
+}
+
+.track-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.track-credits {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.track-disclaimer {
+  font-size: 0.75rem;
+  color: var(--danger);
+  margin-top: 0.5rem;
+}
+
+.track-genres {
+  font-size: 0.8rem;
+  color: var(--text-subtle);
+  margin-top: 0.25rem;
+}
+
+.track.playing {
+  border: 2px solid var(--accent) !important;
+  box-shadow: 0 0 10px var(--accent-soft);
+}
+
+@media (max-width: 600px) {
+  .track {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .track img {
+    max-width: 100%;
+  }
+
+  .track-details {
+    width: 100%;
+  }
+}
+
+.ft-contact-widget {
+  padding: 2em;
+  text-align: center;
+  color: var(--accent-soft)
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background: var(--overlay);
+  color: var(--text);
+  z-index: 1000;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo img {
+  height: 40px;
+  display: block;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: bold;
+}
+.menu-toggle { display: none; cursor: pointer; }
+.menu-toggle i { font-size: 1.5rem; }
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: var(--overlay-strong);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  nav.active { display: flex; }
+  .menu-toggle { display: block; }
+}
+
+section { padding: 100px 20px; min-height: 100vh; }
+section:first-of-type {
+  padding-top: 0px;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text);
+  position: relative;
+  background: var(--backdrop);
+  overflow: hidden;
+  gap: 20px;
+  padding: 100px 40px;
+  flex-wrap: wrap;
+}
+.intro .carousel {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  animation: fade 60s infinite;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.4) blur(4px);
+}
+.intro .content {
+  margin-top: 100px;
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  background: var(--overlay);
+  padding: 20px;
+  border-radius: 10px;
+}
+.intro img {
+  max-width: 400px;
+  border-radius: 12px;
+  z-index: 100;
+  position: relative;
+  margin-left: 50px;
+}
+.content h1 { margin-bottom: 1rem; }
+
+@keyframes fade {
+  0% { background-image: url('img/intro/backdrop.svg'); }
+  100% { background-image: url('img/intro/backdrop.svg'); }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro img {
+    margin: 20px 0 0;
+    max-width: 80%;
+  }
+
+  .intro .content {
+    margin-top: 100px;
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   Featured video (hidden by script.js until a video id is set)
+   ============================================================ */
+#featured-video {
+  min-height: auto;
+  padding-bottom: 40px;
+}
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  max-width: 840px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+
+.video-caption {
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   Reviews
+   ============================================================ */
+.reviews-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 320px;
+}
+
+.review-quote {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.review-name {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.review-context {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.section-title {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.section-title h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.section-title h2:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  background: var(--accent);
+  z-index: 2;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.contact-form input[type=text],
+.contact-form input[type=email],
+.contact-form textarea {
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid var(--form-line);
+  background-color: transparent;
+  margin-bottom: 65px;
+  color: var(--form-placeholder);
+}
+
+.contact-form textarea {
+  height: 195px;
+  margin-bottom: 60px;
+  padding-bottom: 10px;
+}
+
+.contact-form ::placeholder {
+  color: var(--form-placeholder);
+  font-style: italic;
+}
+
+.site-btn {
+  display: block;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent-contrast);
+  min-width: 146px;
+  padding: 9px 10px;
+  border-radius: 5px;
+  background: var(--accent);
+  cursor: pointer;
+  margin: auto;
+}
+
+a:link {
+  color: var(--accent);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--accent-soft);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--accent);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.track-nav-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.scroll-btn {
+  background: var(--button-bg);
+  color: var(--text);
+  border: none;
+  padding: 8px 12px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.scroll-btn:hover {
+  background: var(--button-border);
+}
+
+@media (max-width: 768px) {
+  .scroll-btn {
+    display: none;
+  }
+}
+
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 100%;
+  background: var(--tooltip-bg);
+  color: var(--text);
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: pre-line;
+  z-index: 1000;
+  width: 220px;
+  text-align: center;
+  transition: opacity 0.2s ease;
+}
+
+.track:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* MOBILE PLAYLIST HIDDEN ON DESKTOP */
+.mobile-track-list {
+  display: none;
+}
+
+/* MOBILE ONLY */
+@media (max-width: 768px) {
+
+  /* hide the entire desktop carousel area */
+  .track-nav-wrapper,
+  .track-grid {
+    display: none !important;
+  }
+
+  /* show mobile playlist — height of 4 tracks */
+  .mobile-track-list {
+    display: block;
+    max-height: calc(4 * 90px);
+    overflow-y: auto;
+    margin-top: 15px;
+    border: 1px solid var(--text-muted);
+    border-radius: 12px;
+    background: var(--backdrop);
+  }
+}
+
+/* MOBILE ROW */
+.mobile-track-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-bottom: 1px solid var(--row-line);
+  cursor: pointer;
+}
+
+.mobile-track-row:last-child {
+  border-bottom: none;
+}
+
+.mobile-track-art {
+  width: 22vw;
+  max-width: 90px;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.mobile-track-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.mobile-track-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.1rem;
+  margin-bottom: 3px;
+}
+
+.mobile-track-artist {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.mobile-track-indicator {
+  width: 30px;
+  font-size: 1.2rem;
+  opacity: 0.6;
+  text-align: center;
+}
+
+.mobile-track-row.playing {
+  background: var(--playing-bg);
+}
+
+.mobile-track-row.playing .mobile-track-indicator {
+  opacity: 1;
+  color: var(--accent);
+}
+
+audio {
+  width: 100%;
+  border-radius: 10px;
+  padding: 6px;
+  accent-color: var(--accent);
+}
+
+.mobile-track-disclaimer {
+  font-size: 0.75rem;
+  color: var(--danger-strong);
+  margin-top: 4px;
+  line-height: 1.1rem;
+  font-weight: 600;
+}
+
+/* ============================================================
+   Booking form (booking.html)
+   ============================================================ */
+.booking-form {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.booking-form .bf-label {
+  display: block;
+  font-weight: 600;
+  margin: 1.6rem 0 0.4rem;
+}
+
+.booking-form input[type=text],
+.booking-form input[type=email] {
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  padding: 6px 0 10px;
+  border-bottom: 1px solid var(--form-line);
+  background-color: transparent;
+  color: var(--text);
+}
+
+.booking-form textarea {
+  width: 100%;
+  min-height: 160px;
+  font-size: 14px;
+  font-family: inherit;
+  padding: 10px;
+  border: 1px solid var(--form-line);
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--text);
+  resize: vertical;
+}
+
+.booking-form ::placeholder {
+  color: var(--form-placeholder);
+  font-style: italic;
+}
+
+.booking-form .bf-two-col {
+  display: flex;
+  gap: 2rem;
+}
+
+.booking-form .bf-two-col > div {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .booking-form .bf-two-col {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.booking-form .bf-group {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.booking-form .bf-group .bf-label {
+  padding: 0;
+}
+
+.booking-form .bf-choice {
+  display: block;
+  margin: 0.4rem 0;
+  cursor: pointer;
+}
+
+.booking-form .bf-choice input {
+  accent-color: var(--accent);
+  margin-right: 8px;
+  width: auto;
+}

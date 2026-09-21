@@ -1,0 +1,122 @@
+{
+  "site": {
+    "author": "NEW ARTIST NAME",
+    "siteUrl": "https://example.com",
+    "analyticsId": "",
+    "keywords": "session bassist, bass player, remote bass sessions, music production, mixing, mastering, audio engineering",
+    "ogTitle": "Elormentary Studios - Session Bass, Production, Mixing & Mastering",
+    "ogDescription": "Session bass playing plus production, mixing and mastering work. Listen to samples and get in touch!",
+    "ogImage": "https://example.com/img/intro/headshot.svg",
+    "twitterTitle": "NEW ARTIST NAME - Session Bass & Production",
+    "twitterDescription": "Session bass playing plus production, mixing and mastering work. Hear samples and get in touch."
+  },
+  "contact": {
+    "email": "hello@example.com",
+    "phone": "(000) 000-0000",
+    "phoneHref": "+1000-000-0000",
+    "instagram": "https://instagram.com/CHANGEME",
+    "facebook": "https://facebook.com/CHANGEME",
+    "formAction": "https://formspree.io/f/xdaqojlp"
+  },
+  "home": {
+    "seoTitle": "Elormentary Studios | Bass Player Mixing Mastering Producer",
+    "seoDescription": "Placeholder search description - session bass playing plus production, mixing and mastering services. Replace this in the editor's SEO section (~155 characters works best).",
+    "heroTitle": "Elormentary Studios - Bass, Production, Mixing & Mastering",
+    "heroTagline": "Killer basslines and elevated mixes",
+    "introParagraphs": [
+      "My name is Elorm Agbeyaka. I am a passionate musician, audio engineer and producer dedicated to helping artists bring their musical visions to life. With over 15 years of experience playing bass across a wide range of genres, I have honed my skills in crafting music that engages and inspires the listener.",
+      "Collaboration is at the heart of everything I do. I love working closely with artists and performers, helping them shape their ideas into something they can be truly proud of. Whether it is playing bass, producing, or polishing a track to perfection, I am here to elevate your music and make your vision a reality."
+    ],
+    "videoHeading": "Watch",
+    "videoId": "",
+    "videoCaption": "Placeholder caption for the featured video.",
+    "bassHeading": "Bass Playing",
+    "bassBlurb": "Session and live bass work. Filter by genre to find something close to your project.",
+    "bassCta": "Click or tap on any of the tracks below to listen!",
+    "prodHeading": "Production, Mixing & Mastering",
+    "prodBlurb": "Production, mix and master credits. Filter by what was done on the track, or by genre.",
+    "prodFilterBlurbs": [
+      {
+        "credit": "Production",
+        "text": "This is where ideas become reality. I am passionate about helping you bring your music to life. Whether you are starting with a rough demo or looking to refine a fully written track, I will help every step of the way. I can assist with songwriting, arrangements, top-lining, and handle every aspect of the recording process.\n\nTogether we will craft a product that will make you proud, reflect your vision and resonate with your audience. My studio is equipped for recording vocals, acoustic and electric guitars, bass, woodwind, brass, synths and more, with industry-grade results. All the industry standard software is available.\n\nListen to some of my production works, and let’s talk about how we can bring your ideas to life."
+      },
+      {
+        "credit": "Produced",
+        "text": "Your Vision, Brought to Life\n\nThis is where ideas become reality. I am passionate about helping you bring your music to life. Whether you are starting with a rough demo or looking to refine a fully written track, I will help every step of the way. I can assist with songwriting, arrangements, top-lining, and handle every aspect of the recording process.\n\nTogether we will craft a product that will make you proud, reflect your vision and resonate with your audience. My studio is equipped for recording vocals, acoustic and electric guitars, bass, woodwind, brass, synths and more, with industry-grade results. All the industry standard software is available.\n\nListen to some of my production works, and let’s talk about how we can bring your ideas to life."
+      },
+      {
+        "credit": "Mixing",
+        "text": "I believe that every track has a story, and my job is to help your stories stand out. I bring balance, depth, and clarity to your music, while highlighting the nuances that make it unique. I will make sure every element of your song fits perfectly, delivering the vibes and intentions of your music."
+      },
+      {
+        "credit": "Mastering",
+        "text": "Mastering is the final step in making your music shine. This is where tracks gain that extra polish, ensuring they sound balanced, clear, and professional on any system. The goal here is to bring out the best in your music, staying true to your artistic intent and sounding commercially competitive.\n\nWhether you need a single track or a full album mastered, I focus on achieving loudness, clarity, and cohesion without losing the distinct characteristics of your music. Since mastering is a blend of technical expertise and artistic choices, working with a musician is the way to go to finalize your songs for streaming, radio or live performances."
+      }
+    ],
+    "prodCta": "Click or tap on any of the tracks below to listen!",
+    "reviewsHeading": "Reviews & Testimonials",
+    "reviewsBlurb": "What artists and clients have to say about working together.",
+    "contactHeading": "Get in Touch",
+    "contactBlurb": "Placeholder contact blurb - every project is unique, rates available on request. Reach out to talk about your music."
+  },
+  "reviews": [
+    {
+      "quote": "Working with Elorm was nothing short of a fun, organic and creative process. He was quick to respond, patient, and precise in his execution and assisted me every step of the way. He is my go-to when it comes to mixing and mastering and he treats his clients like family. If you are looking for quality and care to your tracks or you wanna bring something to life and just give it that elevation on a professional level, I always recommend Elorm.",
+      "name": "Lewis \"Kilcasca\" De Marcy Pugin",
+      "context": "Singer-Songwriter/Producer/Performer"
+    },
+    {
+      "quote": "\"Elorm is truly one of my favourite people that I’ve ever worked with! He is incredibly skilled, detail-oriented, attentive, and intuitive when it comes to creating music. He approaches projects with an open and collaborative spirit, always ensuring that the artist feels heard and that their vision for the song is front and centre. Working with Elorm was music to my ears (literally and figuratively!), and I look forward to many more collaborations in the future. If you’re looking for a producer and/or mixing engineer, he’s your guy!\"",
+      "name": "Natalia Valencia",
+      "context": "Singer-Songwriter/Performer"
+    },
+    {
+      "quote": "\"I’ve had the immense pleasure of working with Elorm on multiple occasions, both live and in the studio. Apart from being an absolutely brilliant bass player, he’s an utter professional, a mature musician who is versatile, and above all a kind human being. The Toronto music scene is lucky to have him. I look forward to working with him soon again.\"",
+      "name": "Mir Kashif Iqbal",
+      "context": "Singer-Songwriter/Guitarist/Producer"
+    },
+    {
+      "quote": "\"Elorm has an incredible ability to bring songs to life, offering creative production options that elevate every track. His intuition and versatility make him a perfect collaborator, especially for artists who need guidance in shaping their sound. Working with him was a fun, easy and transformative experience.\"",
+      "name": "Hamza Rehman",
+      "context": "Singer-Songwriter/Guitarist/Producer"
+    },
+    {
+      "quote": "\"Elorm is probably one of Ontario's best bassists and all around a really great dude to work with. I've known him for many years and have done both studio recording and live work with him - he is very professional, courteous, and never fails to deliver on quality work. You won't regret it if you hire him for your next project.\"",
+      "name": "Alex McVittie (Antarctic Studios) ",
+      "context": "Engineer/Producer/Keyboardist & Pianist/Saxophonist"
+    },
+    {
+      "quote": "\"Elorm is the kind of guy who shows up, cares about his craft, and enriches your sound. Having worked with him both in the studio and in live performance settings, I can promise that he delivers!\"",
+      "name": "Michael Friedman ",
+      "context": "Drummer/Engineer/Producer/Coach"
+    },
+    {
+      "quote": "\"Elorm is literally one of the most professional and talented musicians I know! His keen ear as a composer and engineer always add a much needed personal touch to any song or mix. He's been a core part of all the music projects I've taken on in the last few years and will continue to be for years to come!\"",
+      "name": "Matthew Leandres (Lattitude) ",
+      "context": "Singer-Songwriter/Producer/Performer"
+    }
+  ],
+  "booking": {
+    "seoTitle": "Elormentary Studios | Booking",
+    "seoDescription": "Book bass playing, production, mixing or mastering. Tell me about your project and I will get back to you as soon as I can.",
+    "heading": "Booking",
+    "blurb": "Interested in working together? Fill out the form below with as much detail as you can, and I'll get back to you as soon as possible."
+  },
+  "faq": {
+    "seoTitle": "Elormentary Studios | FAQ & Policies",
+    "seoDescription": "Placeholder FAQ page description - booking, payment, revisions, and delivery policies for sessions and mixing work.",
+    "heading": "Policies & FAQ",
+    "sections": [
+      {
+        "title": "Booking & Deposits",
+        "body": "Placeholder policy text. Explain how booking works, whether a deposit is required, and what happens on cancellation. Use <br> for line breaks."
+      },
+      {
+        "title": "Revisions & Delivery",
+        "body": "Placeholder policy text. Explain how many revisions are included with a mix or a session, what formats are delivered, and typical turnaround time."
+      }
+    ],
+    "contactHeading": "Get in Touch",
+    "contactBlurb": "If you have any further questions or want to ask about rates, please get in touch!"
+  }
+}
