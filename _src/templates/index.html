@@ -91,7 +91,7 @@
     <p class="video-caption">{{home.videoCaption}}</p>
   </section>
 
-  <section id="bass" class="player-section">
+  <section id="bass" class="player-section has-backdrop" style="--section-bg-image: url('img/intro/backdropA.webp');" >
     <h2>{{home.bassHeading}}</h2>
     <p class="section-blurb">{{home.bassBlurb}}</p>
 
@@ -113,7 +113,7 @@
     <audio class="player" controls style="width: 100%; margin-top: 30px;" controlsList="nodownload" aria-label="Audio player for bass playing tracks"></audio>
   </section>
 
-  <section id="production" class="player-section">
+  <section id="production" class="player-section has-backdrop" style="--section-bg-image: url('img/intro/backdropB.webp');" >
     <h2>{{home.prodHeading}}</h2>
     <p class="section-blurb">{{home.prodBlurb}}</p>
 {{#each home.prodFilterBlurbs}}    <p class="section-blurb" data-credit="{{credit}}" style="display: none;">{{text}}</p>
@@ -141,7 +141,7 @@
     <audio class="player" controls style="width: 100%; margin-top: 30px;" controlsList="nodownload" aria-label="Audio player for production, mixing and mastering tracks"></audio>
   </section>
 
-  <section id="reviews">
+  <section id="reviews" class="has-backdrop" style="--section-bg-image: url('img/intro/backdropC.webp');">
     <h2>{{home.reviewsHeading}}</h2>
     <p style="text-align: center;">{{home.reviewsBlurb}}</p>
     <div class="reviews-grid">
@@ -153,7 +153,7 @@
 {{/each}}    </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="has-backdrop" style="--section-bg-image: url('img/intro/backdropD.jpg');" >
      <div class="section-title">
         <h2>{{home.contactHeading}}</h2>
         <p>{{home.contactBlurb}}</p>
