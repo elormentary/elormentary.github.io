@@ -398,6 +398,125 @@ function initVideoEmbed(el) {
   restart();
 })();
 
+// ============================================================================
+//  REVIEWS CAROUSEL
+//  The reviews render as a flat grid of cards; this paginates them into sets of
+//  N and turns them into an auto-advancing carousel. N differs by screen size —
+//  data-per-page (desktop) and data-per-page-mobile (≤768px) on #reviews, both
+//  chosen in the editor — and it re-paginates when the breakpoint is crossed.
+//  If everything already fits on one page at the current size, the plain grid
+//  is shown with no controls.
+// ============================================================================
+(function initReviewsCarousel() {
+  const section = document.getElementById("reviews");
+  if (!section) return;
+  const grid = section.querySelector(".reviews-grid");
+  if (!grid) return;
+
+  const allCards = [...grid.querySelectorAll(".review-card")];
+  if (!allCards.length) return;
+
+  const perDesktop = Math.max(1, parseInt(section.dataset.perPage, 10) || 2);
+  const perMobile = Math.max(1, parseInt(section.dataset.perPageMobile, 10) || 1);
+  const mql = window.matchMedia("(max-width: 768px)");
+
+  // A stable host we re-render into (replaces the server-rendered grid once).
+  const host = document.createElement("div");
+  host.className = "reviews-host";
+  grid.replaceWith(host);
+
+  let stopTimer = null; // clears the active page's auto-advance before a rebuild
+
+  function render() {
+    if (stopTimer) { stopTimer(); stopTimer = null; }
+    host.replaceChildren();
+
+    const perPage = mql.matches ? perMobile : perDesktop;
+
+    // Fits on one page → plain centered grid, no carousel.
+    if (allCards.length <= perPage) {
+      const g = document.createElement("div");
+      g.className = "reviews-grid";
+      allCards.forEach(card => g.appendChild(card));
+      host.appendChild(g);
+      return;
+    }
+
+    const pages = [];
+    for (let i = 0; i < allCards.length; i += perPage) pages.push(allCards.slice(i, i + perPage));
+
+    const track = document.createElement("div");
+    track.className = "rc-track";
+    pages.forEach(pageCards => {
+      const slide = document.createElement("div");
+      slide.className = "rc-slide";
+      const pageGrid = document.createElement("div");
+      pageGrid.className = "reviews-grid";
+      pageCards.forEach(card => pageGrid.appendChild(card));
+      slide.appendChild(pageGrid);
+      track.appendChild(slide);
+    });
+
+    const viewport = document.createElement("div");
+    viewport.className = "rc-viewport";
+    viewport.appendChild(track);
+
+    const mkBtn = (cls, label, text) => {
+      const b = document.createElement("button");
+      b.className = "vc-btn " + cls;
+      b.setAttribute("aria-label", label);
+      b.textContent = text;
+      return b;
+    };
+    const prev = mkBtn("prev", "Previous reviews", "←");
+    const next = mkBtn("next", "Next reviews", "→");
+
+    const carousel = document.createElement("div");
+    carousel.className = "reviews-carousel";
+    carousel.append(prev, viewport, next);
+
+    const dotsWrap = document.createElement("div");
+    dotsWrap.className = "vc-dots";
+
+    host.append(carousel, dotsWrap);
+
+    let index = 0;
+    let timer = null;
+
+    const dots = pages.map((_, i) => {
+      const dot = document.createElement("button");
+      dot.className = "vc-dot";
+      dot.setAttribute("aria-label", "Go to review set " + (i + 1));
+      dot.onclick = () => { go(i); restart(); };
+      dotsWrap.appendChild(dot);
+      return dot;
+    });
+
+    function go(i) {
+      index = (i + pages.length) % pages.length;
+      track.style.transform = "translateX(" + (-index * 100) + "%)";
+      dots.forEach((d, j) => d.classList.toggle("active", j === index));
+    }
+    function restart() {
+      clearInterval(timer);
+      timer = setInterval(() => go(index + 1), 8000);
+    }
+
+    prev.onclick = () => { go(index - 1); restart(); };
+    next.onclick = () => { go(index + 1); restart(); };
+    carousel.addEventListener("mouseenter", () => clearInterval(timer));
+    carousel.addEventListener("mouseleave", restart);
+
+    go(0);
+    restart();
+    stopTimer = () => clearInterval(timer);
+  }
+
+  render();
+  // Re-paginate when the viewport crosses the mobile/desktop breakpoint.
+  mql.addEventListener ? mql.addEventListener("change", render) : mql.addListener(render);
+})();
+
 // =============================================
 // ROBUST FIX FOR INSTAGRAM/FACEBOOK BROKEN HASHES
 // =============================================

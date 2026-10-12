@@ -1,6 +1,9 @@
 {
   "site": {
     "author": "Elormentary Studios",
+    "logo": "img/intro/logo.svg",
+    "logoVideo": "img/intro/elormentary_animatedtext_transparent.webm",
+    "logoHeight": 90,
     "siteUrl": "https://elormentary.github.io",
     "analyticsId": "",
     "keywords": "session bassist, bass player, remote bass sessions, music production, mixing, mastering, audio engineering",
@@ -74,6 +77,8 @@
     "prodCta": "Click or tap on any of the tracks below to listen!",
     "reviewsHeading": "Reviews & Testimonials",
     "reviewsBlurb": "What artists and clients have to say about working together.",
+    "reviewsPerPage": 6,
+    "reviewsPerPageMobile": 2,
     "contactHeading": "Get in Touch",
     "contactBlurb": "Every project is unique, rates available on request. Reach out to talk about your music.",
     "backdrops": {

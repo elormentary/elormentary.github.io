@@ -236,8 +236,10 @@ header {
   align-items: center;
 }
 
-header .logo img {
-  height: 40px;
+header .logo img,
+header .logo video {
+  height: var(--logo-height, 40px);
+  width: auto;
   display: block;
 }
 
@@ -526,6 +528,34 @@ section.has-backdrop > * {
   border-radius: 12px;
   padding: 1.5rem;
   width: 320px;
+  max-width: 100%;
+}
+
+/* Reviews carousel — script.js paginates the cards into sets of N (data-per-page)
+   and only builds this when there are more reviews than fit on one page. */
+.reviews-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.rc-viewport {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.rc-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.rc-slide {
+  min-width: 100%;
 }
 
 .review-quote {
