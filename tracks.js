@@ -68,6 +68,34 @@ const hierarchy = {
 
 const bassTracks = [
   {
+    "title": "Hamza Rehman - Line on a Page",
+    "file": "audio/Line_on_a_Page_Final_Master.mp3",
+    "artwork": "img/portfolio/crossroads.webp",
+    "genresBroad": ["Pop"],
+    "genres": ["Singer-Songwriter"]
+  },
+  {
+    "title": "Hamza Rehman - Catch My Eye",
+    "file": "audio/Catch_My_Eye_Final_Master.mp3",
+    "artwork": "img/portfolio/crossroads.webp",
+    "genresBroad": ["Pop"],
+    "genres": ["Singer-Songwriter"]
+  },
+  {
+    "title": "Hamza Rehman - DLMD",
+    "file": "audio/DLMD_Final_Master.mp3",
+    "artwork": "img/portfolio/crossroads.webp",
+    "genresBroad": ["Pop"],
+    "genres": ["Singer-Songwriter"]
+  },
+  {
+    "title": "Hamza Rehman - 3AM",
+    "file": "audio/3_AM_Final_Master.mp3",
+    "artwork": "img/portfolio/crossroads.webp",
+    "genresBroad": ["Pop"],
+    "genres": ["Singer-Songwriter"]
+  },
+  {
     "title": "Arcane - Eternity",
     "file": "audio/Arcane_-_Eternity.mp3",
     "artwork": "img/portfolio/arcane-sorry-for-the-mess.webp",
@@ -227,34 +255,6 @@ const bassTracks = [
     "artwork": "img/portfolio/sweetfiend.webp",
     "genresBroad": ["Rock"],
     "genres": ["Metal"]
-  },
-  {
-    "title": "Hamza Rehman - Line on a Page",
-    "file": "audio/Line_on_a_Page_Final_Master.mp3",
-    "artwork": "img/portfolio/3am.webp",
-    "genresBroad": ["Pop"],
-    "genres": ["Singer-Songwriter"]
-  },
-  {
-    "title": "Hamza Rehman - Catch My Eye",
-    "file": "audio/Catch_My_Eye_Final_Master.mp3",
-    "artwork": "img/portfolio/3am.webp",
-    "genresBroad": ["Pop"],
-    "genres": ["Singer-Songwriter"]
-  },
-  {
-    "title": "Hamza Rehman - DLMD",
-    "file": "audio/DLMD_Final_Master.mp3",
-    "artwork": "img/portfolio/3am.webp",
-    "genresBroad": ["Pop"],
-    "genres": ["Singer-Songwriter"]
-  },
-  {
-    "title": "Hamza Rehman - 3AM",
-    "file": "audio/3_AM_Final_Master.mp3",
-    "artwork": "img/portfolio/3am.webp",
-    "genresBroad": ["Pop"],
-    "genres": ["Singer-Songwriter"]
   }
 ];
 
