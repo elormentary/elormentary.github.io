@@ -243,6 +243,19 @@ header .logo video {
   display: block;
 }
 
+/* On small screens, cap the logo width so a tall/wide logo (e.g. an animated
+   text video) can't crowd out the header or overflow the screen — it scales
+   down proportionally, staying within its set height. */
+@media (max-width: 768px) {
+  header .logo img,
+  header .logo video {
+    height: auto;
+    width: auto;
+    max-height: var(--logo-height, 40px);
+    max-width: 60vw;
+  }
+}
+
 nav {
   display: flex;
   gap: 1rem;
