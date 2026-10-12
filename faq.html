@@ -2,14 +2,19 @@
 <!-- GENERATED FILE — do not edit by hand. Edit _src/content.json or _src/templates/faq.html and rebuild with the site editor. -->
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <!-- Google tag (gtag.js) — only downloaded once an analytics id is set in the editor -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', '');
+    (function (id) {
+      if (!id) return;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', id);
+    })('');
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,7 +25,10 @@
 
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="img/touch.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <!-- Icon font loads without blocking the first paint (media swaps to "all" once fetched) -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'"/>
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/></noscript>
 
   <script type="application/ld+json">
     {
@@ -111,10 +119,10 @@ If the cancellation is on our end, your deposit will be fully refunded.
       </form>
       <div class="ft-contact-widget">
         <p class="contact-links">
-          <a href="https://instagram.com/elormentary" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> </a>
-          <a href="https://www.tiktok.com/@elormentary" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i> </a>
-          <a href="https://www.youtube.com/channel/UCXdYWOsve9eDr9uOCWJjUAA" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> </a>
-          <a href="mailto:elorm.agbeyaka@gmail.com" target="_blank" rel="noopener"><i class="fa-solid fa-envelope"></i> </a>
+          <a href="https://instagram.com/elormentary" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i> </a>
+          <a href="https://www.tiktok.com/@elormentary" target="_blank" rel="noopener" aria-label="Tiktok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i> </a>
+          <a href="https://www.youtube.com/channel/UCXdYWOsve9eDr9uOCWJjUAA" target="_blank" rel="noopener" aria-label="Youtube"><i class="fa-brands fa-youtube" aria-hidden="true"></i> </a>
+          <a href="mailto:elorm.agbeyaka@gmail.com" target="_blank" rel="noopener" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i> </a>
         </p>
         <p><a href="mailto:elorm.agbeyaka@gmail.com"><i class="fa fa-envelope"></i> elorm.agbeyaka@gmail.com</a></p>
       </div>

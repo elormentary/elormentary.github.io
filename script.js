@@ -192,7 +192,7 @@ function createPlayer(cfg) {
       div.dataset.file = track.file;
       div.innerHTML = `
         <div class="track-desktop">
-          <img src="${track.artwork}" alt="${track.title}">
+          <img src="${track.artwork}" alt="${track.title}" loading="lazy" decoding="async">
           <div class="track-details">
             <div class="track-title">${track.title}</div>
             <div class="track-credits">${metaLine(track)}</div>
@@ -212,7 +212,7 @@ function createPlayer(cfg) {
       row.className = "mobile-track-row";
       row.dataset.file = track.file;
       row.innerHTML = `
-        <img class="mobile-track-art" src="${track.artwork}" alt="${track.title}">
+        <img class="mobile-track-art" src="${track.artwork}" alt="${track.title}" loading="lazy" decoding="async">
         <div class="mobile-track-text">
           <div class="mobile-track-title">${track.title}</div>
           <div class="mobile-track-artist">${metaLine(track)}</div>
@@ -323,11 +323,12 @@ function initVideoEmbed(el) {
 //  Each section (and the hero) carries a data-backdrop image path chosen in the
 //  editor. An empty value means "no backdrop" (a plain background). Applied at
 //  runtime so turning a backdrop off is clean — no leftover overlay.
+//  Each image is only fetched once its section is about to scroll into view,
+//  so a visitor doesn't download every backdrop up front.
 // ============================================================================
 (function initSectionBackdrops() {
-  document.querySelectorAll("[data-backdrop]").forEach(el => {
-    const bg = (el.dataset.backdrop || "").trim();
-    if (!bg) return;
+  function apply(el) {
+    const bg = el.dataset.backdrop.trim();
     if (el.tagName === "SECTION") {
       el.classList.add("has-backdrop");
       el.style.setProperty("--section-bg-image", "url('" + bg + "')");
@@ -335,7 +336,21 @@ function initVideoEmbed(el) {
       // the hero's full-cover .carousel layer
       el.style.backgroundImage = "url('" + bg + "')";
     }
-  });
+  }
+
+  const els = [...document.querySelectorAll("[data-backdrop]")]
+    .filter(el => (el.dataset.backdrop || "").trim());
+
+  if (!("IntersectionObserver" in window)) { els.forEach(apply); return; }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      apply(entry.target);
+      observer.unobserve(entry.target);
+    });
+  }, { rootMargin: "800px 0px" });
+  els.forEach(el => observer.observe(el));
 })();
 
 // ============================================================================

@@ -2,14 +2,19 @@
 <!-- GENERATED FILE — do not edit by hand. Edit _src/content.json or _src/templates/index.html and rebuild with the site editor. -->
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{site.analyticsId}}"></script>
+  <!-- Google tag (gtag.js) — only downloaded once an analytics id is set in the editor -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', '{{site.analyticsId}}');
+    (function (id) {
+      if (!id) return;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', id);
+    })('{{site.analyticsId}}');
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,7 +25,10 @@
 
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="img/touch.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <!-- Icon font loads without blocking the first paint (media swaps to "all" once fetched) -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'"/>
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/></noscript>
 
   <script type="application/ld+json">
     {
@@ -72,7 +80,7 @@
     <div class="content">
       <h1>{{home.heroTitle}}</h1>
       <br>
-      <h3 style="font-style: italic; margin-bottom: 1rem;">{{home.heroTagline}}</h3>
+      <p class="tagline">{{home.heroTagline}}</p>
       <br>
 {{#each home.introParagraphs}}      <p>
       {{.}}
@@ -99,7 +107,7 @@
     <h2>{{home.bassHeading}}</h2>
     <p class="section-blurb">{{home.bassBlurb}}</p>
 
-    <h4>Filter by Genre</h4>
+    <h3 class="filter-label">Filter by Genre</h3>
     <div class="filter-row genre-buttons"></div>
     <div class="sub-filter-row sub-genre-buttons"></div>
 
@@ -123,11 +131,11 @@
 {{#each home.prodFilterBlurbs}}    <p class="section-blurb" data-credit="{{credit}}" style="display: none;">{{text}}</p>
 {{/each}}
 
-    <h4>Filter by Credit</h4>
+    <h3 class="filter-label">Filter by Credit</h3>
     <div class="filter-row credit-buttons"></div>
     <div class="sub-filter-row sub-credit-buttons"></div>
 
-    <h4>Filter by Genre</h4>
+    <h3 class="filter-label">Filter by Genre</h3>
     <div class="filter-row genre-buttons"></div>
     <div class="sub-filter-row sub-genre-buttons"></div>
 
@@ -209,7 +217,7 @@
       </form>
       <div class="ft-contact-widget">
         <p class="contact-links">
-{{#each contact.links}}          <a href="{{url}}" target="_blank" rel="noopener"><i class="{{icon}}"></i> {{label}}</a>
+{{#each contact.links}}          <a href="{{url}}" target="_blank" rel="noopener" aria-label="{{ariaLabel}}"><i class="{{icon}}" aria-hidden="true"></i> {{label}}</a>
 {{/each}}        </p>
         <p><a href="mailto:{{contact.email}}"><i class="fa fa-envelope"></i> {{contact.email}}</a></p>
       </div>
