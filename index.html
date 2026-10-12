@@ -31,7 +31,7 @@
       "image": "",
       "jobTitle": "Session Bassist, Producer & Mixing Engineer",
       "sameAs": [
-        "https://instagram.com/CHANGEME",
+        "https://instagram.com/elormentary",
         "https://facebook.com/CHANGEME"
       ]
     }
@@ -57,6 +57,7 @@
       <a href="#about">About</a>
       <a href="#bass">Bass Playing</a>
       <a href="#production">Production</a>
+      <a href="#live-sound">Live Sound</a>
       <a href="#reviews">Reviews</a>
       <a href="booking">Booking</a>
       <a href="#contact">Contact</a>
@@ -66,7 +67,7 @@
 
   <section id="about" class="intro">
 
-    <div class="carousel"></div>
+    <div class="carousel" data-backdrop="img/intro/backdrop.webp"></div>
 
     <div class="content">
       <h1>Elormentary Studios - Bass, Production, Mixing & Mastering</h1>
@@ -95,7 +96,7 @@
     <p class="video-caption">Placeholder caption for the featured video.</p>
   </section>
 
-  <section id="bass" class="player-section has-backdrop" style="--section-bg-image: url('img/intro/backdropA.webp');" >
+  <section id="bass" class="player-section" data-backdrop="img/intro/backdropA.webp">
     <h2>Bass Playing</h2>
     <p class="section-blurb">Session and live bass work. Filter by genre to find something close to your project.</p>
 
@@ -117,7 +118,7 @@
     <audio class="player" controls style="width: 100%; margin-top: 30px;" controlsList="nodownload" aria-label="Audio player for bass playing tracks"></audio>
   </section>
 
-  <section id="production" class="player-section has-backdrop" style="--section-bg-image: url('img/intro/backdropB.webp');" >
+  <section id="production" class="player-section" data-backdrop="img/intro/backdropB.webp">
     <h2>Production, Mixing & Mastering</h2>
     <p class="section-blurb">Production, mix and master credits. Filter by what was done on the track, or by genre.</p>
     <p class="section-blurb" data-credit="Production" style="display: none;">This is where ideas become reality. I am passionate about helping you bring your music to life. I can assist with songwriting, arrangements, top-lining, and handle every aspect of the recording process. Together we will craft a product that will make you proud, reflect your vision and resonate with your audience.</p>
@@ -148,7 +149,51 @@
     <audio class="player" controls style="width: 100%; margin-top: 30px;" controlsList="nodownload" aria-label="Audio player for production, mixing and mastering tracks"></audio>
   </section>
 
-  <section id="reviews" class="has-backdrop" style="--section-bg-image: url('img/intro/backdropC.webp');">
+  <section id="live-sound" data-backdrop="img/intro/sneaks.webp">
+    <h2>Live Sound</h2>
+    <p class="section-blurb">I’ve had the privilege of being an live audio engineer at more than 10 venues and festivals across Ontario, working with artists and performers across a wide range of genres and settings.
+
+My live audio experience started in the mid-2010s, operating mixing boards at coffee shops and university events. Since then, I’ve continued to build my experience working with both digital and analog consoles, including the MIDAS M32, DiGiCo S21, and Allen & Heath SQ-5.
+
+I’ve provided live sound for acts including Zeruel, Dropout Kings, The Huntingtons, The Riptides, IAN BW, Candlelight Concerts, Kip James, Tom Green, Meteor Heist, ANIKA, Kill The Burr, Living Room for Small, Dammit Goldie, J3M, and Minami Deutsch.
+
+As a performing musician, I understand that it is important to feel comfortable with the person running sound. Someone who can communicate clearly, and trust that your sound needs are met. I bring that perspective with me to every show. I’m focused on helping the performers sound their best and giving the audience a great experience.</p>
+
+    <div id="live-video" data-video-id="">
+      <div class="video-embed">
+        <iframe title="Live performance video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">A live set captured front-of-house.</p>
+    </div>
+
+    <div class="venue-carousel">
+      <button class="vc-btn prev" aria-label="Previous photo">←</button>
+      <div class="vc-viewport">
+        <div class="vc-track">
+          <figure class="vc-slide">
+            <img src="img/live/IMG_4417.heif.webp" alt="Live sound for Candlelight Strings in Toronto." loading="lazy">
+            <figcaption>Live sound for Candlelight Strings in Toronto.</figcaption>
+          </figure>
+          <figure class="vc-slide">
+            <img src="img/live/IMG_4777.heif.webp" alt="Live sound for Sneaky Dee's in Toronto." loading="lazy">
+            <figcaption>Live sound for Sneaky Dee's in Toronto.</figcaption>
+          </figure>
+          <figure class="vc-slide">
+            <img src="img/live/IMG_5159.heif.webp" alt="" loading="lazy">
+            <figcaption></figcaption>
+          </figure>
+          <figure class="vc-slide">
+            <img src="img/live/IMG_5179.heif.webp" alt="" loading="lazy">
+            <figcaption></figcaption>
+          </figure>
+        </div>
+      </div>
+      <button class="vc-btn next" aria-label="Next photo">→</button>
+    </div>
+    <div class="vc-dots"></div>
+  </section>
+
+  <section id="reviews" data-backdrop="img/intro/backdropC.webp">
     <h2>Reviews & Testimonials</h2>
     <p style="text-align: center;">What artists and clients have to say about working together.</p>
     <div class="reviews-grid">
@@ -190,10 +235,10 @@
     </div>
   </section>
 
-  <section id="contact" class="has-backdrop" style="--section-bg-image: url('img/intro/backdropD.jpg');" >
+  <section id="contact" data-backdrop="img/intro/backdropD.jpg">
      <div class="section-title">
         <h2>Get in Touch</h2>
-        <p>Placeholder contact blurb - every project is unique, rates available on request. Reach out to talk about your music.</p>
+        <p>Every project is unique, rates available on request. Reach out to talk about your music.</p>
       </div>
       <form class="contact-form" action="https://formspree.io/f/xdaqojlp" method="POST">
         <div class="row">
@@ -215,11 +260,11 @@
         </div>
       </form>
       <div class="ft-contact-widget">
-        <p><a href="https://instagram.com/CHANGEME" target="_blank"><i class="fa-brands fa-instagram"></i> </a>
+        <p><a href="https://instagram.com/elormentary" target="_blank"><i class="fa-brands fa-instagram"></i> </a>
           <a href="https://facebook.com/CHANGEME" target="_blank"><i class="fa-brands fa-facebook"></i> </a></p>
           <br>
-          <p><a href="mailto:hello@example.com"><i class="fa fa-envelope"></i> hello@example.com</a></p>
-          <p><a href="tel:+1000-000-0000"><i class="fa fa-phone"></i> (000) 000-0000</a></p>
+          <p><a href="mailto:elorm.agbeyaka@gmail.com"><i class="fa fa-envelope"></i> elorm.agbeyaka@gmail.com</a></p>
+          <p><a href="tel:"><i class="fa fa-phone"></i> </a></p>
       </div>
   </section>
 

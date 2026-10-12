@@ -306,7 +306,6 @@ section.has-backdrop > * {
   top: 0; left: 0;
   width: 100%; height: 100%;
   z-index: 0;
-  animation: fade 60s infinite;
   background-size: cover;
   background-position: center;
   filter: brightness(0.4) blur(4px);
@@ -328,11 +327,6 @@ section.has-backdrop > * {
   margin-left: 50px;
 }
 .content h1 { margin-bottom: 1rem; }
-
-@keyframes fade {
-  0% { background-image: url('img/intro/backdrop.webp'); }
-  100% { background-image: url('img/intro/backdrop.webp'); }
-}
 
 @media (max-width: 768px) {
   .intro {
@@ -381,6 +375,114 @@ section.has-backdrop > * {
   text-align: center;
   margin-top: 1rem;
   color: var(--text-muted);
+}
+
+/* ============================================================
+   Live Sound — optional performance video + venue carousel
+   ============================================================ */
+#live-sound {
+  min-height: auto;
+  padding-bottom: 60px;
+}
+
+/* Preserve the paragraph breaks typed into the Live Sound blurb */
+#live-sound .section-blurb {
+  white-space: pre-line;
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+  text-align: left;
+}
+
+#live-video {
+  max-width: 840px;
+  margin: 0 auto 2.5rem;
+}
+
+.venue-carousel {
+  position: relative;
+  max-width: 840px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.vc-viewport {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.vc-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.vc-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.vc-slide img {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
+  background: var(--card-bg);
+}
+
+.vc-slide figcaption {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: 0.85rem;
+  min-height: 1.2rem;
+}
+
+.vc-btn {
+  flex: 0 0 auto;
+  background: var(--button-bg);
+  color: var(--text);
+  border: 1px solid var(--button-border);
+  padding: 10px 14px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.vc-btn:hover {
+  background: var(--button-border);
+}
+
+.vc-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1.25rem;
+}
+
+.vc-dot {
+  width: 11px;
+  height: 11px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--button-border);
+  background: var(--button-bg);
+  cursor: pointer;
+}
+
+.vc-dot.active {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .vc-slide img { height: 280px; }
+  .vc-btn { padding: 8px 10px; font-size: 1rem; }
 }
 
 /* ============================================================

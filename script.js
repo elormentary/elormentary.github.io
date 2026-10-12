@@ -305,15 +305,97 @@ function createPlayer(cfg) {
 }
 
 // ============================================================================
-//  FEATURED VIDEO
-//  The section hides itself until a YouTube video id is set in the editor.
+//  VIDEO EMBEDS
+//  Each wrapper hides itself until a YouTube video id is set in the editor.
+//  Covers the standalone Featured Video section and the Live Sound video.
 // ============================================================================
-(function initFeaturedVideo() {
-  const sec = document.getElementById("featured-video");
-  if (!sec) return;
-  const id = (sec.dataset.videoId || "").trim();
-  if (!id) { sec.style.display = "none"; return; }
-  sec.querySelector("iframe").src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(id);
+function initVideoEmbed(el) {
+  if (!el) return;
+  const id = (el.dataset.videoId || "").trim();
+  if (!id) { el.style.display = "none"; return; }
+  const iframe = el.querySelector("iframe");
+  if (iframe) iframe.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(id);
+}
+["featured-video", "live-video"].forEach(id => initVideoEmbed(document.getElementById(id)));
+
+// ============================================================================
+//  SECTION BACKDROPS
+//  Each section (and the hero) carries a data-backdrop image path chosen in the
+//  editor. An empty value means "no backdrop" (a plain background). Applied at
+//  runtime so turning a backdrop off is clean — no leftover overlay.
+// ============================================================================
+(function initSectionBackdrops() {
+  document.querySelectorAll("[data-backdrop]").forEach(el => {
+    const bg = (el.dataset.backdrop || "").trim();
+    if (!bg) return;
+    if (el.tagName === "SECTION") {
+      el.classList.add("has-backdrop");
+      el.style.setProperty("--section-bg-image", "url('" + bg + "')");
+    } else {
+      // the hero's full-cover .carousel layer
+      el.style.backgroundImage = "url('" + bg + "')";
+    }
+  });
+})();
+
+// ============================================================================
+//  LIVE SOUND VENUE CAROUSEL
+//  A sliding gallery of venue photos with captions: arrows, clickable dots and
+//  gentle auto-advance (paused on hover). Hides itself when there are no slides.
+// ============================================================================
+(function initVenueCarousel() {
+  const carousel = document.querySelector("#live-sound .venue-carousel");
+  const dotsWrap = document.querySelector("#live-sound .vc-dots");
+  if (!carousel) return;
+
+  const track = carousel.querySelector(".vc-track");
+  const slides = [...track.querySelectorAll(".vc-slide")];
+  const prev = carousel.querySelector(".vc-btn.prev");
+  const next = carousel.querySelector(".vc-btn.next");
+
+  if (slides.length === 0) {
+    carousel.style.display = "none";
+    if (dotsWrap) dotsWrap.style.display = "none";
+    return;
+  }
+
+  let index = 0;
+  let timer = null;
+
+  const dots = slides.map((_, i) => {
+    const dot = document.createElement("button");
+    dot.className = "vc-dot";
+    dot.setAttribute("aria-label", "Go to photo " + (i + 1));
+    dot.onclick = () => { go(i); restart(); };
+    dotsWrap.appendChild(dot);
+    return dot;
+  });
+
+  function go(i) {
+    index = (i + slides.length) % slides.length;
+    track.style.transform = "translateX(" + (-index * 100) + "%)";
+    dots.forEach((d, j) => d.classList.toggle("active", j === index));
+  }
+
+  function restart() {
+    if (slides.length < 2) return;
+    clearInterval(timer);
+    timer = setInterval(() => go(index + 1), 6000);
+  }
+
+  // A single photo needs no controls.
+  if (slides.length < 2) {
+    prev.style.display = next.style.display = "none";
+    dotsWrap.style.display = "none";
+  } else {
+    prev.onclick = () => { go(index - 1); restart(); };
+    next.onclick = () => { go(index + 1); restart(); };
+    carousel.addEventListener("mouseenter", () => clearInterval(timer));
+    carousel.addEventListener("mouseleave", restart);
+  }
+
+  go(0);
+  restart();
 })();
 
 // =============================================

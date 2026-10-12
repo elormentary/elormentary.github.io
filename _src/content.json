@@ -11,10 +11,10 @@
     "twitterDescription": "Session bass playing plus production, mixing and mastering work. Hear samples and get in touch."
   },
   "contact": {
-    "email": "hello@example.com",
-    "phone": "(000) 000-0000",
-    "phoneHref": "+1000-000-0000",
-    "instagram": "https://instagram.com/CHANGEME",
+    "email": "elorm.agbeyaka@gmail.com",
+    "phone": "",
+    "phoneHref": "",
+    "instagram": "https://instagram.com/elormentary",
     "facebook": "https://facebook.com/CHANGEME",
     "formAction": "https://formspree.io/f/xdaqojlp"
   },
@@ -57,7 +57,39 @@
     "reviewsHeading": "Reviews & Testimonials",
     "reviewsBlurb": "What artists and clients have to say about working together.",
     "contactHeading": "Get in Touch",
-    "contactBlurb": "Placeholder contact blurb - every project is unique, rates available on request. Reach out to talk about your music."
+    "contactBlurb": "Every project is unique, rates available on request. Reach out to talk about your music.",
+    "backdrops": {
+      "about": "img/intro/backdrop.webp",
+      "bass": "img/intro/backdropA.webp",
+      "production": "img/intro/backdropB.webp",
+      "liveSound": "img/intro/sneaks.webp",
+      "reviews": "img/intro/backdropC.webp",
+      "contact": "img/intro/backdropD.jpg"
+    }
+  },
+  "liveSound": {
+    "heading": "Live Sound",
+    "blurb": "I’ve had the privilege of being an live audio engineer at more than 10 venues and festivals across Ontario, working with artists and performers across a wide range of genres and settings.\n\nMy live audio experience started in the mid-2010s, operating mixing boards at coffee shops and university events. Since then, I’ve continued to build my experience working with both digital and analog consoles, including the MIDAS M32, DiGiCo S21, and Allen & Heath SQ-5.\n\nI’ve provided live sound for acts including Zeruel, Dropout Kings, The Huntingtons, The Riptides, IAN BW, Candlelight Concerts, Kip James, Tom Green, Meteor Heist, ANIKA, Kill The Burr, Living Room for Small, Dammit Goldie, J3M, and Minami Deutsch.\n\nAs a performing musician, I understand that it is important to feel comfortable with the person running sound. Someone who can communicate clearly, and trust that your sound needs are met. I bring that perspective with me to every show. I’m focused on helping the performers sound their best and giving the audience a great experience.",
+    "videoId": "",
+    "videoCaption": "A live set captured front-of-house.",
+    "venues": [
+      {
+        "image": "img/live/IMG_4417.heif.webp",
+        "caption": "Live sound for Candlelight Strings in Toronto."
+      },
+      {
+        "image": "img/live/IMG_4777.heif.webp",
+        "caption": "Live sound for Sneaky Dee's in Toronto."
+      },
+      {
+        "image": "img/live/IMG_5159.heif.webp",
+        "caption": ""
+      },
+      {
+        "image": "img/live/IMG_5179.heif.webp",
+        "caption": ""
+      }
+    ]
   },
   "reviews": [
     {

@@ -57,6 +57,7 @@
       <a href="#about">About</a>
       <a href="#bass">Bass Playing</a>
       <a href="#production">Production</a>
+      <a href="#live-sound">Live Sound</a>
       <a href="#reviews">Reviews</a>
       <a href="booking">Booking</a>
       <a href="#contact">Contact</a>
@@ -66,7 +67,7 @@
 
   <section id="about" class="intro">
 
-    <div class="carousel"></div>
+    <div class="carousel" data-backdrop="{{home.backdrops.about}}"></div>
 
     <div class="content">
       <h1>{{home.heroTitle}}</h1>
@@ -91,7 +92,7 @@
     <p class="video-caption">{{home.videoCaption}}</p>
   </section>
 
-  <section id="bass" class="player-section has-backdrop" style="--section-bg-image: url('img/intro/backdropA.webp');" >
+  <section id="bass" class="player-section" data-backdrop="{{home.backdrops.bass}}">
     <h2>{{home.bassHeading}}</h2>
     <p class="section-blurb">{{home.bassBlurb}}</p>
 
@@ -113,7 +114,7 @@
     <audio class="player" controls style="width: 100%; margin-top: 30px;" controlsList="nodownload" aria-label="Audio player for bass playing tracks"></audio>
   </section>
 
-  <section id="production" class="player-section has-backdrop" style="--section-bg-image: url('img/intro/backdropB.webp');" >
+  <section id="production" class="player-section" data-backdrop="{{home.backdrops.production}}">
     <h2>{{home.prodHeading}}</h2>
     <p class="section-blurb">{{home.prodBlurb}}</p>
 {{#each home.prodFilterBlurbs}}    <p class="section-blurb" data-credit="{{credit}}" style="display: none;">{{text}}</p>
@@ -141,7 +142,33 @@
     <audio class="player" controls style="width: 100%; margin-top: 30px;" controlsList="nodownload" aria-label="Audio player for production, mixing and mastering tracks"></audio>
   </section>
 
-  <section id="reviews" class="has-backdrop" style="--section-bg-image: url('img/intro/backdropC.webp');">
+  <section id="live-sound" data-backdrop="{{home.backdrops.liveSound}}">
+    <h2>{{liveSound.heading}}</h2>
+    <p class="section-blurb">{{liveSound.blurb}}</p>
+
+    <div id="live-video" data-video-id="{{liveSound.videoId}}">
+      <div class="video-embed">
+        <iframe title="Live performance video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">{{liveSound.videoCaption}}</p>
+    </div>
+
+    <div class="venue-carousel">
+      <button class="vc-btn prev" aria-label="Previous photo">←</button>
+      <div class="vc-viewport">
+        <div class="vc-track">
+{{#each liveSound.venues}}          <figure class="vc-slide">
+            <img src="{{image}}" alt="{{caption}}" loading="lazy">
+            <figcaption>{{caption}}</figcaption>
+          </figure>
+{{/each}}        </div>
+      </div>
+      <button class="vc-btn next" aria-label="Next photo">→</button>
+    </div>
+    <div class="vc-dots"></div>
+  </section>
+
+  <section id="reviews" data-backdrop="{{home.backdrops.reviews}}">
     <h2>{{home.reviewsHeading}}</h2>
     <p style="text-align: center;">{{home.reviewsBlurb}}</p>
     <div class="reviews-grid">
@@ -153,7 +180,7 @@
 {{/each}}    </div>
   </section>
 
-  <section id="contact" class="has-backdrop" style="--section-bg-image: url('img/intro/backdropD.jpg');" >
+  <section id="contact" data-backdrop="{{home.backdrops.contact}}">
      <div class="section-title">
         <h2>{{home.contactHeading}}</h2>
         <p>{{home.contactBlurb}}</p>
