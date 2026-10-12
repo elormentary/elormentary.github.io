@@ -12,11 +12,29 @@
   },
   "contact": {
     "email": "elorm.agbeyaka@gmail.com",
-    "phone": "",
-    "phoneHref": "",
-    "instagram": "https://instagram.com/elormentary",
-    "facebook": "https://facebook.com/CHANGEME",
-    "formAction": "https://formspree.io/f/xdaqojlp"
+    "formAction": "https://formspree.io/f/xdaqojlp",
+    "links": [
+      {
+        "icon": "fa-brands fa-instagram",
+        "url": "https://instagram.com/elormentary",
+        "label": ""
+      },
+      {
+        "icon": "fa-brands fa-tiktok",
+        "url": "https://www.tiktok.com/@elormentary",
+        "label": ""
+      },
+      {
+        "icon": "fa-brands fa-youtube",
+        "url": "https://www.youtube.com/channel/UCXdYWOsve9eDr9uOCWJjUAA",
+        "label": ""
+      },
+      {
+        "icon": "fa-solid fa-envelope",
+        "url": "mailto:elorm.agbeyaka@gmail.com",
+        "label": ""
+      }
+    ]
   },
   "home": {
     "seoTitle": "Elormentary Studios | Bass Player Mixing Mastering Producer",

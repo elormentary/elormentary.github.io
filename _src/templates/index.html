@@ -31,8 +31,8 @@
       "image": "{{site.ogImage}}",
       "jobTitle": "Session Bassist, Producer & Mixing Engineer",
       "sameAs": [
-        "{{contact.instagram}}",
-        "{{contact.facebook}}"
+        "{{site.siteUrl}}"{{#each contact.links}},
+        "{{url}}"{{/each}}
       ]
     }
   </script>
@@ -205,11 +205,10 @@
         </div>
       </form>
       <div class="ft-contact-widget">
-        <p><a href="{{contact.instagram}}" target="_blank"><i class="fa-brands fa-instagram"></i> </a>
-          <a href="{{contact.facebook}}" target="_blank"><i class="fa-brands fa-facebook"></i> </a></p>
-          <br>
-          <p><a href="mailto:{{contact.email}}"><i class="fa fa-envelope"></i> {{contact.email}}</a></p>
-          <p><a href="tel:{{contact.phoneHref}}"><i class="fa fa-phone"></i> {{contact.phone}}</a></p>
+        <p class="contact-links">
+{{#each contact.links}}          <a href="{{url}}" target="_blank" rel="noopener"><i class="{{icon}}"></i> {{label}}</a>
+{{/each}}        </p>
+        <p><a href="mailto:{{contact.email}}"><i class="fa fa-envelope"></i> {{contact.email}}</a></p>
       </div>
   </section>
 

@@ -204,6 +204,26 @@ h1, h2, h3, h4 {
   color: var(--accent-soft)
 }
 
+/* Flexible row of contact/social icon links (edited in the Contact tab) */
+.ft-contact-widget .contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.ft-contact-widget .contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ft-contact-widget .contact-links a i {
+  font-size: 1.6rem;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -423,15 +443,19 @@ section.has-backdrop > * {
 .vc-slide {
   min-width: 100%;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .vc-slide img {
-  width: 100%;
-  height: 500px;
-  object-fit: contain;
+  max-width: 100%;
+  max-height: 560px;
+  width: auto;
+  height: auto;
   display: block;
   border-radius: 12px;
-  background: var(--card-bg);
 }
 
 .vc-slide figcaption {
@@ -481,7 +505,7 @@ section.has-backdrop > * {
 }
 
 @media (max-width: 768px) {
-  .vc-slide img { height: 280px; }
+  .vc-slide img { max-height: 360px; }
   .vc-btn { padding: 8px 10px; font-size: 1rem; }
 }
 
