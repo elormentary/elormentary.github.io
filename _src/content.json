@@ -79,6 +79,7 @@
     "reviewsBlurb": "What artists and clients have to say about working together.",
     "reviewsPerPage": 6,
     "reviewsPerPageMobile": 2,
+    "reviewsAutoplaySeconds": 8,
     "contactHeading": "Get in Touch",
     "contactBlurb": "Every project is unique, rates available on request. Reach out to talk about your music.",
     "backdrops": {
@@ -95,6 +96,7 @@
     "blurb": "I’ve had the privilege of being an live audio engineer at more than 10 venues and festivals across Ontario, working with artists and performers across a wide range of genres and settings.\n\nMy live audio experience started in the mid-2010s, operating mixing boards at coffee shops and university events. Since then, I’ve continued to build my experience working with both digital and analog consoles, including the MIDAS M32, DiGiCo S21, and Allen & Heath SQ-5.\n\nI’ve provided live sound for acts including Zeruel, Dropout Kings, The Huntingtons, The Riptides, IAN BW, Candlelight Concerts, Kip James, Tom Green, Meteor Heist, ANIKA, Kill The Burr, Living Room for Small, Dammit Goldie, J3M, and Minami Deutsch.\n\nAs a performing musician, I understand that it is important to feel comfortable with the person running sound. Someone who can communicate clearly, and trust that your sound needs are met. I bring that perspective with me to every show. I’m focused on helping the performers sound their best and giving the audience a great experience.",
     "videoId": "",
     "videoCaption": "A live set captured front-of-house.",
+    "autoplaySeconds": 6,
     "venues": [
       {
         "image": "img/live/IMG_4417.heif.webp",
@@ -138,7 +140,7 @@
     {
       "quote": "\"Elorm is probably one of Ontario's best bassists and all around a really great dude to work with. I've known him for many years and have done both studio recording and live work with him - he is very professional, courteous, and never fails to deliver on quality work. You won't regret it if you hire him for your next project.\"",
       "name": "Alex McVittie (Antarctic Studios) ",
-      "context": "Engineer/Producer/Keyboardist & Pianist/Saxophonist"
+      "context": "Engineer/Producer/Keyboardist/Saxophonist"
     },
     {
       "quote": "\"Elorm is the kind of guy who shows up, cares about his craft, and enriches your sound. Having worked with him both in the studio and in live performance settings, I can promise that he delivers!\"",
@@ -164,11 +166,7 @@
     "sections": [
       {
         "title": "Booking & Deposits",
-        "body": "Placeholder policy text. Explain how booking works, whether a deposit is required, and what happens on cancellation. Use <br> for line breaks."
-      },
-      {
-        "title": "Revisions & Delivery",
-        "body": "Placeholder policy text. Explain how many revisions are included with a mix or a session, what formats are delivered, and typical turnaround time."
+        "body": "A deposit is required to secure your booking. The amount varies depending on the type and length of the session. If a deposit is not received within 72 hours, the booking may be cancelled and the time slot made available to other clients. \n<br>\nDeposits are non-refundable. If you need to cancel, the deposit can be applied toward a future booking or service.\n<br>\nIf the cancellation is on our end, your deposit will be fully refunded. "
       }
     ],
     "contactHeading": "Get in Touch",

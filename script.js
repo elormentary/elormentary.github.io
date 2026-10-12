@@ -344,9 +344,14 @@ function initVideoEmbed(el) {
 //  gentle auto-advance (paused on hover). Hides itself when there are no slides.
 // ============================================================================
 (function initVenueCarousel() {
+  const section = document.getElementById("live-sound");
   const carousel = document.querySelector("#live-sound .venue-carousel");
   const dotsWrap = document.querySelector("#live-sound .vc-dots");
   if (!carousel) return;
+
+  // Auto-advance delay (seconds) is set per section in the editor; 0 = off.
+  const rawSec = parseFloat(section && section.dataset.autoplaySeconds);
+  const autoplayMs = (Number.isFinite(rawSec) ? rawSec : 6) * 1000;
 
   const track = carousel.querySelector(".vc-track");
   const slides = [...track.querySelectorAll(".vc-slide")];
@@ -380,7 +385,7 @@ function initVideoEmbed(el) {
   function restart() {
     if (slides.length < 2) return;
     clearInterval(timer);
-    timer = setInterval(() => go(index + 1), 6000);
+    if (autoplayMs > 0) timer = setInterval(() => go(index + 1), autoplayMs);
   }
 
   // A single photo needs no controls.
@@ -420,6 +425,10 @@ function initVideoEmbed(el) {
   const perMobile = Math.max(1, parseInt(section.dataset.perPageMobile, 10) || 1);
   const mql = window.matchMedia("(max-width: 768px)");
 
+  // Auto-advance delay (seconds) is set per section in the editor; 0 = off.
+  const rawSec = parseFloat(section.dataset.autoplaySeconds);
+  const autoplayMs = (Number.isFinite(rawSec) ? rawSec : 8) * 1000;
+
   // A stable host we re-render into (replaces the server-rendered grid once).
   const host = document.createElement("div");
   host.className = "reviews-host";
@@ -433,26 +442,36 @@ function initVideoEmbed(el) {
 
     const perPage = mql.matches ? perMobile : perDesktop;
 
-    // Fits on one page → plain centered grid, no carousel.
+    // Sliding window: each view shows up to `perPage` reviews and advances by
+    // ONE review, so the sets overlap (e.g. 7 reviews at 6/view → [1-6] then
+    // [2-7]) rather than ending on a sparse page. Cards recur across windows,
+    // so each window gets its own clones.
+    const windows = [];
     if (allCards.length <= perPage) {
+      windows.push(allCards);
+    } else {
+      for (let start = 0; start + perPage <= allCards.length; start++) {
+        windows.push(allCards.slice(start, start + perPage));
+      }
+    }
+
+    // A single view → plain centered grid, no carousel.
+    if (windows.length === 1) {
       const g = document.createElement("div");
       g.className = "reviews-grid";
-      allCards.forEach(card => g.appendChild(card));
+      windows[0].forEach(card => g.appendChild(card.cloneNode(true)));
       host.appendChild(g);
       return;
     }
 
-    const pages = [];
-    for (let i = 0; i < allCards.length; i += perPage) pages.push(allCards.slice(i, i + perPage));
-
     const track = document.createElement("div");
     track.className = "rc-track";
-    pages.forEach(pageCards => {
+    windows.forEach(winCards => {
       const slide = document.createElement("div");
       slide.className = "rc-slide";
       const pageGrid = document.createElement("div");
       pageGrid.className = "reviews-grid";
-      pageCards.forEach(card => pageGrid.appendChild(card));
+      winCards.forEach(card => pageGrid.appendChild(card.cloneNode(true)));
       slide.appendChild(pageGrid);
       track.appendChild(slide);
     });
@@ -483,7 +502,7 @@ function initVideoEmbed(el) {
     let index = 0;
     let timer = null;
 
-    const dots = pages.map((_, i) => {
+    const dots = windows.map((_, i) => {
       const dot = document.createElement("button");
       dot.className = "vc-dot";
       dot.setAttribute("aria-label", "Go to review set " + (i + 1));
@@ -493,13 +512,13 @@ function initVideoEmbed(el) {
     });
 
     function go(i) {
-      index = (i + pages.length) % pages.length;
+      index = (i + windows.length) % windows.length;
       track.style.transform = "translateX(" + (-index * 100) + "%)";
       dots.forEach((d, j) => d.classList.toggle("active", j === index));
     }
     function restart() {
       clearInterval(timer);
-      timer = setInterval(() => go(index + 1), 8000);
+      if (autoplayMs > 0) timer = setInterval(() => go(index + 1), autoplayMs);
     }
 
     prev.onclick = () => { go(index - 1); restart(); };
