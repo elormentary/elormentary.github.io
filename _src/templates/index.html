@@ -63,10 +63,10 @@
     </div>
     <nav id="navbar">
       <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
       <a href="#bass">Bass Playing</a>
       <a href="#production">Production</a>
       <a href="#live-sound">Live Sound</a>
-      <a href="#reviews">Reviews</a>
       <a href="booking">Booking</a>
       <a href="#contact">Contact</a>
       <a href="faq">FAQ and Policies</a>
@@ -101,6 +101,19 @@
       <iframe title="Featured video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <p class="video-caption">{{home.videoCaption}}</p>
+  </section>
+
+
+  <section id="reviews" data-backdrop="{{home.backdrops.reviews}}" data-per-page="{{home.reviewsPerPage}}" data-per-page-mobile="{{home.reviewsPerPageMobile}}" data-autoplay-seconds="{{home.reviewsAutoplaySeconds}}">
+    <h2>{{home.reviewsHeading}}</h2>
+    <p style="text-align: center;">{{home.reviewsBlurb}}</p>
+    <div class="reviews-grid">
+{{#each reviews}}      <div class="review-card">
+        <p class="review-quote">“{{quote}}”</p>
+        <p class="review-name">{{name}}</p>
+        <p class="review-context">{{context}}</p>
+      </div>
+{{/each}}    </div>
   </section>
 
   <section id="bass" class="player-section" data-backdrop="{{home.backdrops.bass}}">
@@ -177,18 +190,6 @@
       <button class="vc-btn next" aria-label="Next photo">→</button>
     </div>
     <div class="vc-dots"></div>
-  </section>
-
-  <section id="reviews" data-backdrop="{{home.backdrops.reviews}}" data-per-page="{{home.reviewsPerPage}}" data-per-page-mobile="{{home.reviewsPerPageMobile}}" data-autoplay-seconds="{{home.reviewsAutoplaySeconds}}">
-    <h2>{{home.reviewsHeading}}</h2>
-    <p style="text-align: center;">{{home.reviewsBlurb}}</p>
-    <div class="reviews-grid">
-{{#each reviews}}      <div class="review-card">
-        <p class="review-quote">“{{quote}}”</p>
-        <p class="review-name">{{name}}</p>
-        <p class="review-context">{{context}}</p>
-      </div>
-{{/each}}    </div>
   </section>
 
   <section id="contact" data-backdrop="{{home.backdrops.contact}}">
