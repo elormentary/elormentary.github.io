@@ -83,11 +83,11 @@
     "contactHeading": "Get in Touch",
     "contactBlurb": "Every project is unique, rates available on request. Reach out to talk about your music.",
     "backdrops": {
-      "about": "img/intro/backdrop.webp",
-      "bass": "img/intro/backdropA.webp",
+      "about": "img/intro/IMG_0129.webp",
+      "bass": "img/intro/backdropC.webp",
       "production": "img/intro/backdropB.webp",
-      "liveSound": "img/intro/sneaks.webp",
-      "reviews": "img/intro/backdropC.webp",
+      "liveSound": "img/intro/IMG_5257.webp",
+      "reviews": "img/intro/backdropA.webp",
       "contact": "img/intro/backdropD.jpg"
     }
   },
