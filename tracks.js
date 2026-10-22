@@ -68,6 +68,90 @@ const hierarchy = {
 
 const bassTracks = [
   {
+    "title": "Galanthus - Fallwind",
+    "file": "audio/Galanthus_-_Fallwind.mp3",
+    "artwork": "img/portfolio/galnthus3.webp",
+    "genresBroad": ["Rock"],
+    "genres": ["Progressive Rock"]
+  },
+  {
+    "title": "Hamza Rehman - 3AM",
+    "file": "audio/3_AM_Final_Master.mp3",
+    "artwork": "img/portfolio/crossroads.webp",
+    "genresBroad": ["Pop"],
+    "genres": ["Singer-Songwriter"]
+  },
+  {
+    "title": "Sweet Fiend - Holy Demons",
+    "file": "audio/Sweet_Fiend_-_Holy_Demons_Bass.mp3",
+    "artwork": "img/portfolio/sweetfiend.webp",
+    "genresBroad": ["Rock"],
+    "genres": ["Metal"]
+  },
+  {
+    "title": "Jade Hilton - Toxic Marathon",
+    "file": "audio/Jade_Hilton_-_Toxic_Marathon_Bass.mp3",
+    "artwork": "img/portfolio/toxicmarathon.webp",
+    "genresBroad": ["Country"],
+    "genres": ["Pop Country"]
+  },
+  {
+    "title": "Hamza Rehman - Don't Let Me Down'",
+    "file": "audio/DLMD_Final_Master.mp3",
+    "artwork": "img/portfolio/crossroads.webp",
+    "genresBroad": ["Pop"],
+    "genres": ["Singer-Songwriter"]
+  },
+  {
+    "title": "Galanthus - Wall Animal",
+    "file": "audio/Galanthus_-_Wall_Animal.mp3",
+    "artwork": "img/portfolio/galnthus3.webp",
+    "genresBroad": ["Rock"],
+    "genres": ["Progressive Rock"]
+  },
+  {
+    "title": "Lydia Kim - Flamingo",
+    "file": "audio/Lydia_Kim_-_Flamingo.mp3",
+    "artwork": "img/portfolio/flamingo_placeholder.webp",
+    "genresBroad": ["Pop"],
+    "genres": ["Singer-Songwriter"]
+  },
+  {
+    "title": "Galanthus - Big Dawn",
+    "file": "audio/Galanthus_-_Big_Dawn.mp3",
+    "artwork": "img/portfolio/galnthus3.webp",
+    "genresBroad": ["Rock"],
+    "genres": ["Progressive Rock"]
+  },
+  {
+    "title": "Arcane - Pretend Lovers",
+    "file": "audio/Arcane_-_Pretend_Lovers.mp3",
+    "artwork": "img/portfolio/arcane-pretendlovers.webp",
+    "genresBroad": ["Funk & Soul"],
+    "genres": ["R&B"]
+  },
+  {
+    "title": "Arcane - Eternity",
+    "file": "audio/Arcane_-_Eternity.mp3",
+    "artwork": "img/portfolio/arcane-sorry-for-the-mess.webp",
+    "genresBroad": ["Funk & Soul"],
+    "genres": ["R&B"]
+  },
+  {
+    "title": "Galanthus - The Flowing Iliad",
+    "file": "audio/Galanthus_-_The_Flowing_Iliad.mp3",
+    "artwork": "img/portfolio/galanthus_impact.webp",
+    "genresBroad": ["Rock"],
+    "genres": ["Progressive Rock"]
+  },
+  {
+    "title": "Galanthus - Ichor",
+    "file": "audio/Galanthus_-_Ichor.mp3",
+    "artwork": "img/portfolio/galanthus_impact.webp",
+    "genresBroad": ["Rock"],
+    "genres": ["Progressive Rock"]
+  },
+  {
     "title": "Hamza Rehman - Line on a Page",
     "file": "audio/Line_on_a_Page_Final_Master.mp3",
     "artwork": "img/portfolio/crossroads.webp",
@@ -80,35 +164,9 @@ const bassTracks = [
     "artwork": "img/portfolio/crossroads.webp",
     "genresBroad": ["Pop"],
     "genres": ["Singer-Songwriter"]
-  },
-  {
-    "title": "Hamza Rehman - DLMD",
-    "file": "audio/DLMD_Final_Master.mp3",
-    "artwork": "img/portfolio/crossroads.webp",
-    "genresBroad": ["Pop"],
-    "genres": ["Singer-Songwriter"]
-  },
-  {
-    "title": "Hamza Rehman - 3AM",
-    "file": "audio/3_AM_Final_Master.mp3",
-    "artwork": "img/portfolio/crossroads.webp",
-    "genresBroad": ["Pop"],
-    "genres": ["Singer-Songwriter"]
-  },
-  {
-    "title": "Arcane - Eternity",
-    "file": "audio/Arcane_-_Eternity.mp3",
-    "artwork": "img/portfolio/arcane-sorry-for-the-mess.webp",
-    "genresBroad": ["Funk & Soul"],
-    "genres": ["R&B"]
-  },
-  {
-    "title": "Arcane - Pretend Lovers",
-    "file": "audio/Arcane_-_Pretend_Lovers.mp3",
-    "artwork": "img/portfolio/arcane-pretendlovers.webp",
-    "genresBroad": ["Funk & Soul"],
-    "genres": ["R&B"]
-  },
+  },  
+
+
   {
     "title": "Galanthus - A False Hope",
     "file": "audio/Galanthus_-_A_False_Hope.mp3",
@@ -123,24 +181,11 @@ const bassTracks = [
     "genresBroad": ["Rock"],
     "genres": ["Progressive Rock"]
   },
-  {
-    "title": "Galanthus - Big Dawn",
-    "file": "audio/Galanthus_-_Big_Dawn.mp3",
-    "artwork": "img/portfolio/galnthus3.webp",
-    "genresBroad": ["Rock"],
-    "genres": ["Progressive Rock"]
-  },
+
   {
     "title": "Galanthus - Challenge Beyond",
     "file": "audio/Galanthus_-_Challenge_Beyond.mp3",
     "artwork": "img/portfolio/galanthus_purple.webp",
-    "genresBroad": ["Rock"],
-    "genres": ["Progressive Rock"]
-  },
-  {
-    "title": "Galanthus - Fallwind",
-    "file": "audio/Galanthus_-_Fallwind.mp3",
-    "artwork": "img/portfolio/galnthus3.webp",
     "genresBroad": ["Rock"],
     "genres": ["Progressive Rock"]
   },
@@ -151,13 +196,7 @@ const bassTracks = [
     "genresBroad": ["Rock"],
     "genres": ["Progressive Rock"]
   },
-  {
-    "title": "Galanthus - Ichor",
-    "file": "audio/Galanthus_-_Ichor.mp3",
-    "artwork": "img/portfolio/galanthus_impact.webp",
-    "genresBroad": ["Rock"],
-    "genres": ["Progressive Rock"]
-  },
+
   {
     "title": "Galanthus - Kessler Syndrome",
     "file": "audio/Galanthus_-_Kessler_Syndrome.mp3",
@@ -179,20 +218,8 @@ const bassTracks = [
     "genresBroad": ["Rock"],
     "genres": ["Progressive Rock"]
   },
-  {
-    "title": "Galanthus - The Flowing Iliad",
-    "file": "audio/Galanthus_-_The_Flowing_Iliad.mp3",
-    "artwork": "img/portfolio/galanthus_impact.webp",
-    "genresBroad": ["Rock"],
-    "genres": ["Progressive Rock"]
-  },
-  {
-    "title": "Galanthus - Wall Animal",
-    "file": "audio/Galanthus_-_Wall_Animal.mp3",
-    "artwork": "img/portfolio/galnthus3.webp",
-    "genresBroad": ["Rock"],
-    "genres": ["Progressive Rock"]
-  },
+
+  
   {
     "title": "High Tea - Cure Michael",
     "file": "audio/High_Tea_-_Cure_Michael_MST_V1.mp3",
@@ -228,20 +255,8 @@ const bassTracks = [
     "genresBroad": ["Rock"],
     "genres": ["Post-Punk"]
   },
-  {
-    "title": "Jade Hilton - Toxic Marathon",
-    "file": "audio/Jade_Hilton_-_Toxic_Marathon_Bass.mp3",
-    "artwork": "img/portfolio/toxicmarathon.webp",
-    "genresBroad": ["Country"],
-    "genres": ["Pop Country"]
-  },
-  {
-    "title": "Lydia Kim - Flamingo",
-    "file": "audio/Lydia_Kim_-_Flamingo.mp3",
-    "artwork": "img/portfolio/flamingo_placeholder.webp",
-    "genresBroad": ["Pop"],
-    "genres": ["Singer-Songwriter"]
-  },
+
+
   {
     "title": "fried.mix - Good Morning",
     "file": "audio/Michael_Friedman_Fried.Mix_-_Good_Morning_MASTER_Bass.mp3",
@@ -249,13 +264,6 @@ const bassTracks = [
     "genresBroad": ["Pop"],
     "genres": ["Electronic"]
   },
-  {
-    "title": "Sweet Fiend - Holy Demons",
-    "file": "audio/Sweet_Fiend_-_Holy_Demons_Bass.mp3",
-    "artwork": "img/portfolio/sweetfiend.webp",
-    "genresBroad": ["Rock"],
-    "genres": ["Metal"]
-  }
 ];
 
 const productionTracks = [
