@@ -22,8 +22,8 @@
   --form-line: #c0c0c0;         /* contact form underline */
   --form-placeholder: #acacac;  /* contact form placeholder text */
   --row-line: #e0e0e0;          /* mobile playlist dividers */
-  --danger: #ff6666;            /* disclaimer text */
-  --danger-strong: #b22222;     /* disclaimer text (mobile) */
+  --danger: #dc8add;            /* disclaimer text */
+  --danger-strong: #9141ac;     /* disclaimer text (mobile) */
   --section-overlay-darken: 0.5;   /* 0 = no darken, 1 = fully black */
   --section-overlay-blur: 0px;     /* blur radius on the backdrop image */
   --section-overlay-brightness: 0.5; /* 1 = normal, <1 dims, >1 brightens */
