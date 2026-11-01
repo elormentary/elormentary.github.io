@@ -60,7 +60,8 @@ const hierarchy = {
         "Singer-Songwriter",
         "Christmas",
         "R&B",
-        "Hip-Hop"
+        "Hip-Hop",
+        "Afrobeats"
       ]
     }
   }
@@ -344,6 +345,15 @@ const productionTracks = [
     "disclaimer": "Elormentary Mix"
   },
   {
+    "title": "Rosina Ferede - I Need (Fulfillment)",
+    "file": "audio/6_-_Rosina_Ferede_-_I_Need_-_2024.mp3",
+    "artwork": "img/portfolio/Rosina_Solomon.webp",
+    "creditsBroad": ["Mixing & Mastering"],
+    "genresBroad": ["Pop"],
+    "credits": ["Mixing","Mastering"],
+    "genres": ["R&B"]
+  },
+  {
     "title": "High Tea - My Dad Can Lift Your Dad",
     "file": "audio/High_Tea_-_My_Dad_Can_Lift_Your_Dad_Demo_Mix_Mastered.mp3",
     "artwork": "img/portfolio/high_tea_split_fissure.webp",
@@ -401,6 +411,15 @@ const productionTracks = [
     "disclaimer": "Elormentary Mix"
   },
   {
+    "title": "Rosina Ferede - Intro",
+    "file": "audio/1_-_Rosina_Ferede_-_Intro_-_2024.mp3",
+    "artwork": "img/portfolio/Rosina_Solomon.webp",
+    "creditsBroad": ["Mixing & Mastering"],
+    "genresBroad": [],
+    "credits": ["Mastering","Mixing"],
+    "genres": []
+  },
+  {
     "title": "Standalone Complex - The Worth in Vain and Sin",
     "file": "audio/Standalone_Complex_-_The_Worth_in_Vain_and_Sin_Elormentary_Mix_Mastered.mp3",
     "artwork": "img/portfolio/standalonecomplex_placeholder.webp",
@@ -409,6 +428,15 @@ const productionTracks = [
     "credits": ["Mixing","Mastering"],
     "genres": ["Metal"],
     "disclaimer": "Elormentary Mix"
+  },
+  {
+    "title": "Ken The King - Future Wife",
+    "file": "audio/5_-_Ken_the_King_-_Future_Wife.mp3",
+    "artwork": "img/portfolio/futurewife.webp",
+    "creditsBroad": ["Mixing & Mastering"],
+    "genresBroad": ["Pop"],
+    "credits": ["Mastering","Mixing"],
+    "genres": ["Afrobeats"]
   },
   {
     "title": "High Tea - Supertoys",
@@ -440,6 +468,15 @@ const productionTracks = [
     "disclaimer": "Cover, not the original."
   },
   {
+    "title": "Ken The King - Do It",
+    "file": "audio/4_-_Ken_the_King_-_Do_It.mp3",
+    "artwork": "img/portfolio/doit.webp",
+    "creditsBroad": ["Mixing & Mastering"],
+    "genresBroad": ["Pop"],
+    "credits": ["Mixing","Mastering"],
+    "genres": ["Afrobeats"]
+  },
+  {
     "title": "High Tea - Cure Michael",
     "file": "audio/High_Tea_-_Cure_Michael_Demo_Mix_Mastered.mp3",
     "artwork": "img/portfolio/high_tea_split_fissure.webp",
@@ -448,6 +485,15 @@ const productionTracks = [
     "credits": ["Mixing","Mastering"],
     "genres": ["Post-Punk"],
     "disclaimer": "Demo"
+  },
+  {
+    "title": "Rosina Ferede - Kick It",
+    "file": "audio/5_-_Rosina_Ferede_-_Kick_IT_-_2024.mp3",
+    "artwork": "img/portfolio/Rosina_Solomon.webp",
+    "creditsBroad": ["Mixing & Mastering"],
+    "genresBroad": ["Pop"],
+    "credits": ["Mastering","Mixing"],
+    "genres": ["R&B"]
   },
   {
     "title": "Sonic Advance 2 - Leaf Forest",
@@ -469,6 +515,15 @@ const productionTracks = [
     "genres": ["Christmas"]
   },
   {
+    "title": "Ken The King - Rude",
+    "file": "audio/2_-_Ken_the_King_-_Rude.mp3",
+    "artwork": "img/portfolio/rude.webp",
+    "creditsBroad": ["Mixing & Mastering"],
+    "genresBroad": ["Pop"],
+    "credits": ["Mastering","Mixing"],
+    "genres": ["Afrobeats"]
+  },
+  {
     "title": "High Tea - I'm Tryna Smoke In The Hospital",
     "file": "audio/High_Tea_-_I_m_Tryna_Smoke_In_The_Hospital_Demo_Mix_Mastered.mp3",
     "artwork": "img/portfolio/high_tea_split_fissure.webp",
@@ -476,6 +531,15 @@ const productionTracks = [
     "genresBroad": ["Rock"],
     "credits": ["Mastering","Mixing"],
     "genres": ["Post-Punk"]
+  },
+  {
+    "title": "Rosina Ferede - Jaded",
+    "file": "audio/2_-_Rosina_Ferede_-_Jaded_-_2024.mp3",
+    "artwork": "img/portfolio/Rosina_Solomon.webp",
+    "creditsBroad": ["Mixing & Mastering"],
+    "genresBroad": ["Pop"],
+    "credits": ["Mastering","Mixing"],
+    "genres": ["R&B"]
   },
   {
     "title": "Kelseidoscope - Jigglypuff Song",
@@ -495,5 +559,43 @@ const productionTracks = [
     "credits": ["Engineering","Mixing","Mastering","Produced"],
     "genres": ["Video Game"],
     "disclaimer": "Cover, not the original."
+  },
+  
+ 
+  {
+    "title": "Rosina Ferede - By My Side",
+    "file": "audio/4_-_Rosina_Ferede_-_By_My_Side_-_2024.mp3",
+    "artwork": "img/portfolio/Rosina_Solomon.webp",
+    "creditsBroad": ["Mixing & Mastering"],
+    "genresBroad": ["Pop"],
+    "credits": ["Mastering","Mixing"],
+    "genres": ["R&B"]
+  },
+  {
+    "title": "Ken The King - Hey World",
+    "file": "audio/1_-_Ken_the_King_-_Hey_World.mp3",
+    "artwork": "img/portfolio/heyworld.webp",
+    "creditsBroad": ["Mixing & Mastering"],
+    "genresBroad": ["Pop"],
+    "credits": ["Mixing","Mastering"],
+    "genres": ["Afrobeats"]
+  },
+  {
+    "title": "Rosina Ferede - Broke Yours",
+    "file": "audio/3_-_Rosina_Ferede_-_Broke_Yours_-_2024.mp3",
+    "artwork": "img/portfolio/Rosina_Solomon.webp",
+    "creditsBroad": ["Mixing & Mastering"],
+    "genresBroad": ["Pop"],
+    "credits": ["Mixing","Mastering"],
+    "genres": ["R&B"]
+  },
+  {
+    "title": "Ken The King - Put That Body On Me",
+    "file": "audio/3_-_Ken_the_King_-_Put_That_Body_On_Me.mp3",
+    "artwork": "img/portfolio/putthatbody.webp",
+    "creditsBroad": ["Mixing & Mastering"],
+    "genresBroad": ["Pop"],
+    "credits": ["Mixing","Mastering"],
+    "genres": ["Afrobeats"]
   }
 ];
