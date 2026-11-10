@@ -202,7 +202,7 @@ const bassTracks = [
     "genres": ["Progressive Rock"]
   },
   {
-    "title": "fried.mix - Good Morning",
+    "title": "Fried.Mix - Good Morning",
     "file": "audio/Michael_Friedman_Fried.Mix_-_Good_Morning_MASTER_Bass.mp3",
     "artwork": "img/portfolio/friedmix_gm.webp",
     "genresBroad": ["Pop"],
@@ -225,7 +225,7 @@ const bassTracks = [
   {
     "title": "Galanthus - Purple Horizon",
     "file": "audio/Galanthus_-_Purple_Horizon.mp3",
-    "artwork": "img/portfolio/galanthus_purple.webp",
+    "artwork": "img/portfolio/624765403_18072965387112346_7382399231156513284_n.webp",
     "genresBroad": ["Rock"],
     "genres": ["Progressive Rock"]
   },
@@ -322,7 +322,8 @@ const productionTracks = [
     "creditsBroad": ["Mixing & Mastering"],
     "genresBroad": ["Rock"],
     "credits": ["Mastering"],
-    "genres": ["Alternative Rock"]
+    "genres": ["Alternative Rock"],
+    "disclaimer": "Elormentary Master"
   },
   {
     "title": "Hamza Rehman - Catch My Eye",
@@ -389,7 +390,8 @@ const productionTracks = [
     "creditsBroad": ["Production","Mixing & Mastering"],
     "genresBroad": ["Rock"],
     "credits": ["Produced","Engineering","Mixing","Mastering"],
-    "genres": ["Progressive Rock"]
+    "genres": ["Progressive Rock"],
+    "disclaimer": "Cover, not the original track."
   },
   {
     "title": "Kilcasa - Tangerine",
@@ -435,17 +437,18 @@ const productionTracks = [
     "artwork": "img/portfolio/futurewife.webp",
     "creditsBroad": ["Mixing & Mastering"],
     "genresBroad": ["Pop"],
-    "credits": ["Mastering","Mixing"],
+    "credits": ["Mastering"],
     "genres": ["Afrobeats"]
   },
   {
-    "title": "High Tea - Supertoys",
+    "title": "High Tea - Supertoys Last All Summer Long",
     "file": "audio/High_Tea_-_SuperToys_Demo_Mix_Mastered.mp3",
     "artwork": "img/portfolio/high_tea_split_fissure.webp",
     "creditsBroad": ["Mixing & Mastering"],
     "genresBroad": ["Rock"],
     "credits": ["Mixing","Mastering"],
-    "genres": ["Post-Punk"]
+    "genres": ["Post-Punk"],
+    "disclaimer": "Demo"
   },
   {
     "title": "Dungblaster - Detsaw",
@@ -473,7 +476,7 @@ const productionTracks = [
     "artwork": "img/portfolio/doit.webp",
     "creditsBroad": ["Mixing & Mastering"],
     "genresBroad": ["Pop"],
-    "credits": ["Mixing","Mastering"],
+    "credits": ["Mastering"],
     "genres": ["Afrobeats"]
   },
   {
@@ -520,7 +523,7 @@ const productionTracks = [
     "artwork": "img/portfolio/rude.webp",
     "creditsBroad": ["Mixing & Mastering"],
     "genresBroad": ["Pop"],
-    "credits": ["Mastering","Mixing"],
+    "credits": ["Mastering"],
     "genres": ["Afrobeats"]
   },
   {
@@ -530,7 +533,8 @@ const productionTracks = [
     "creditsBroad": ["Mixing & Mastering"],
     "genresBroad": ["Rock"],
     "credits": ["Mastering","Mixing"],
-    "genres": ["Post-Punk"]
+    "genres": ["Post-Punk"],
+    "disclaimer": "Demo."
   },
   {
     "title": "Rosina Ferede - Jaded",
@@ -560,8 +564,6 @@ const productionTracks = [
     "genres": ["Video Game"],
     "disclaimer": "Cover, not the original."
   },
-  
- 
   {
     "title": "Rosina Ferede - By My Side",
     "file": "audio/4_-_Rosina_Ferede_-_By_My_Side_-_2024.mp3",
@@ -577,7 +579,7 @@ const productionTracks = [
     "artwork": "img/portfolio/heyworld.webp",
     "creditsBroad": ["Mixing & Mastering"],
     "genresBroad": ["Pop"],
-    "credits": ["Mixing","Mastering"],
+    "credits": ["Mastering"],
     "genres": ["Afrobeats"]
   },
   {
@@ -595,7 +597,7 @@ const productionTracks = [
     "artwork": "img/portfolio/putthatbody.webp",
     "creditsBroad": ["Mixing & Mastering"],
     "genresBroad": ["Pop"],
-    "credits": ["Mixing","Mastering"],
+    "credits": ["Mastering"],
     "genres": ["Afrobeats"]
   }
 ];
