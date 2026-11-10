@@ -104,7 +104,7 @@ const bassTracks = [
     "genres": ["Post-Punk"]
   },
   {
-    "title": "Hamza Rehman - Don't Let Me Down'",
+    "title": "Hamza Rehman - Don't Let Me Down",
     "file": "audio/DLMD_Final_Master.mp3",
     "artwork": "img/portfolio/crossroads.webp",
     "genresBroad": ["Pop"],
