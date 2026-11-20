@@ -457,17 +457,18 @@ function initVideoEmbed(el) {
 
     const perPage = mql.matches ? perMobile : perDesktop;
 
-    // Sliding window: each view shows up to `perPage` reviews and advances by
-    // ONE review, so the sets overlap (e.g. 7 reviews at 6/view → [1-6] then
-    // [2-7]) rather than ending on a sparse page. Cards recur across windows,
-    // so each window gets its own clones.
+    // Balanced pages: use as few pages as fit `perPage`, then spread the
+    // reviews evenly across them (e.g. 8 reviews at up to 6/page → 4 + 4,
+    // 7 at 6 → 4 + 3) so every review appears exactly once and no page ends
+    // up sparse. Earlier pages take the remainder.
     const windows = [];
-    if (allCards.length <= perPage) {
-      windows.push(allCards);
-    } else {
-      for (let start = 0; start + perPage <= allCards.length; start++) {
-        windows.push(allCards.slice(start, start + perPage));
-      }
+    const pageCount = Math.ceil(allCards.length / perPage);
+    const base = Math.floor(allCards.length / pageCount);
+    const extra = allCards.length % pageCount;
+    for (let p = 0, start = 0; p < pageCount; p++) {
+      const size = base + (p < extra ? 1 : 0);
+      windows.push(allCards.slice(start, start + size));
+      start += size;
     }
 
     // A single view → plain centered grid, no carousel.
